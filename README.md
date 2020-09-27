@@ -1,39 +1,26 @@
-# Welcome to the PiE Central Repo!
-![PiE Logo](docs/figures/logo.png)
+# Welcome to the foundry repo!
 
-[![Build Status](https://travis-ci.org/pioneers/PieCentral.svg?branch=master)](https://travis-ci.org/pioneers/PieCentral)
+## What is foundry?
+In the past, DevOps oversaw the deployment pipeline from GitHub to Travis CI to Raspberry Pi boards.
+This is the archive of DevOps tools.
 
-## What is the Central Repo?
-PieCentral is the central repository that hosts all kit software projects:
-- Hibike: our lightweight communications protocol designed for passing sensor data with the PiE robotics kit.
-- Dawn: our cross-platform frontend for the PiE robotics control system.
-- Runtime: the code that handles communication, state, and student code execution.
-- DevOps: oversees the deployment pipeline from GitHub to Travis CI to Beaglebone boards.
-- Shepherd: our full-stack field control software used during the competition.
-
-If you want to learn more about these projects, check out their directories!
-
-## Contributing to PieCentral
+## Contributing to foundry
 Note: You don't have to fork!
-Instead, make your own branch in the central repo once you join the organization.
+Instead, make your own branch in the repo once you join the organization.
 
 ### Setting up PieCentral
 ```sh
 $ cd "<directory of your choice>"
-$ git clone https://github.com/pioneers/PieCentral.git
-$ cd PieCentral
+$ git clone https://github.com/pioneers/foundry.git
+$ cd foundry
 ```
 
 ### Creating a Branch
-Follow the naming convention `<project>/<feature>`.
-Without the `<project>` name, your branch will not be built by Travis.
-Feel free to name the `<feature>` anything or use more slashes.
-
-Examples: `dawn/UDPintegration`, `runtime/andy/UDPintegration`
+Follow the naming convention `<feature>`.
 ```sh
 $ git checkout master  # Switch to default `master` branch
-$ git checkout -b "<project>/<feature>"  # Create and switch to feature branch
-$ git push -u origin "<project>/<feature>"
+$ git checkout -b "<feature>"  # Create and switch to feature branch
+$ git push -u origin "<feature>"
 ```
 
 ### Adding new code to master
@@ -42,11 +29,11 @@ Make sure any local changes to your code is pushed to your branch.
 ```sh
 $ git add "<file1>" "<file2>"
 $ git commit -m "<description>"
-$ git push  # Pushes to `origin/<project>/<feature>` because of `-u` flag earlier
+$ git push  # Pushes to `origin/<feature>` because of `-u` flag earlier
 ```
 
 Open a pull request to `master`. Code will be reviewed by PMs.
 
-Code will be rebased onto master.
+Code will be squashed and merged onto master.
 (Choose "Squash and Merge" instead of "Create a merge commit".)
 Make sure when merging your pull request you include a useful commit header and message.
